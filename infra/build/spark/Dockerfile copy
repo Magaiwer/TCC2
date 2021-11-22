@@ -1,0 +1,15 @@
+# docker image [gcp]
+FROM jupyter/pyspark-notebook
+LABEL maintainer="Magaiver Santos <magaiver.santos@universo.univates.br>"
+
+# using root user
+USER root:root
+
+WORKDIR /usr/local/spark
+# copy jar files
+COPY jars /usr/local/spark/jars
+
+# user
+USER ${NB_UID}
+
+WORKDIR "${HOME}"

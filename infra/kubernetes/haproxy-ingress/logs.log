@@ -1,0 +1,19 @@
+Log file created at: 2021/11/11 01:00:36
+Running on machine: k8s-master
+Binary: Built with gc go1.17.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+Log file created at: 2021/11/11 01:04:16
+Running on machine: k8s-master
+Binary: Built with gc go1.17.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1111 01:04:16.160858 1230926 delete.go:72] delete command started
+Log file created at: 2021/11/11 01:07:33
+Running on machine: k8s-master
+Binary: Built with gc go1.17.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1111 01:07:33.117482 1232388 init.go:73] init command started
+Log file created at: 2021/11/11 01:08:27
+Running on machine: k8s-master
+Binary: Built with gc go1.17.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1111 01:08:27.041492 1232992 proxy.go:64] proxy command started
