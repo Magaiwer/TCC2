@@ -48,7 +48,7 @@ minio/minio
 ### Watch result
     kubectl get tenant -n minio-tenant-1  
 
-### Montagem storage
+### Mount storage
 
     lsblk -f
     mkfs -t ext4 /dev/sdb
