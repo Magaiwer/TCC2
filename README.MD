@@ -1,4 +1,12 @@
 # Road Map tools TCC 2
+Projeto desenvolvido como trabalho final para a conclusão do curso de Engenharia de Software, cujo objetivo foi projetar e desenvolver uma arquitetura de um Data Lake para processamento e armazenamento distribuído Big Data, que possa ser executados em qualquer ambiente independente de cloud provider.
+
+
+ ### Arquitetura:
+ ![architecture](datalake-k8s.png)
+
+
+## Configuração inicial do cluster
 
 ### Haproxy configuration vm load balancer
 
@@ -45,8 +53,8 @@
 
     sudo systemctl restart docker
 
-## Kubernets configuration
-## - Instalação - https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+### Configuração Kubernetes 
+### - Instalação - https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
     1- sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
@@ -56,7 +64,7 @@
        sudo apt-get install -y kubelet=1.22.2-00 kubeadm=1.22.2-00 kubectl=1.22.2-00
        sudo apt-mark hold kubelet kubeadm kubectl
    
-## ou
+### ou
 
     #~ curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 
@@ -65,7 +73,7 @@
     sudo mv ./kubectl /usr/local/bin/kubectl
     kubectl - comand line to manager kubernets and clusters 
 
-## Cluster configuration
+## Configuração do cluster
     - Desabilitar swap: 
         swapoff -a 
     - Renomear vms:
@@ -83,12 +91,12 @@
 
     - Test:
         kubectl get pod -n kube-system -w
-## Get join Token
+### Objer token de ingresso no cluster
     kubeadm token list # if token not expired
     kubeadm token create # generate new token
     kubeadm token create --print-join-command # show comand to join node the cluster
 
-## Comandos
+# Comandos úteis
     kubectl get nodes - ver clusters em execução
     kubectl get pods --watch - ver pods em execução iterativo
 
@@ -152,7 +160,7 @@
 ### Expor um serviço 
     kubectl port-forward -n spark service/jupyter 8888:8888
 
-### Minikube - cluster virtual 
+### Minikube - cluster virtual para testes locais
 
     curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.12.1/minikube-linux-amd64 \ && chmod +x minikube
 
